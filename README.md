@@ -96,6 +96,8 @@ Se aplicó PCA sobre variables estandarizadas con el objetivo de reducir la dime
 
 Las tres primeras componentes principales explicaron aproximadamente el 81,4% de la variabilidad total.
 
+![Varianza acumulada del PCA](reports/figures/pca_varianza_acumulada.png)
+
 Las componentes se interpretaron de la siguiente manera:
 
 - **CP1**: desempeño posicional general. Valores positivos se asocian con peores posiciones de largada, llegada y campeonato, mientras que valores negativos se vinculan con mejores posiciones y mayor rendimiento competitivo.
