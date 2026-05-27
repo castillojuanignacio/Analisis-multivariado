@@ -3,7 +3,7 @@
 
 ---
 
-Este proyecto desarrolla un análisis multivariado sobre resultados históricos de Fórmula 1, con el objetivo de identificar perfiles de desempeño en observaciones piloto-carrera. El trabajo incluye análisis exploratorio de datos, construcción de variables derivadas, Análisis de Componentes Principales (PCA) y clustering mediante K-Means.
+Este proyecto desarrolla un análisis multivariado sobre resultados de Fórmula 1 desde la temporada 2000 en adelante, con el objetivo de identificar perfiles de desempeño en observaciones piloto-carrera. El trabajo incluye análisis exploratorio de datos, construcción de variables derivadas, Análisis de Componentes Principales (PCA) y clustering mediante K-Means.
 
 La unidad de análisis no es una carrera completa, sino una observación piloto-carrera. Es decir, cada fila representa el desempeño de un piloto específico en una carrera determinada.
 
