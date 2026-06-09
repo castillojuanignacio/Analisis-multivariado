@@ -90,11 +90,15 @@ Se excluyeron variables como `race_points` y `driver_championship_points`, ya qu
 
 También se reemplazó `laps` por `laps_pct`, ya que las carreras no tienen todas la misma cantidad de vueltas. De esta forma, laps_pct mide la proporción de carrera completada por cada piloto respecto del máximo de vueltas de esa carrera.
 
+También se excluyó `circuit_alt` del conjunto activo final. En pruebas preliminares, esta variable generaba grupos asociados principalmente a la altitud del circuito, lo que desviaba la interpretación hacia características geográficas en lugar de perfiles deportivos de desempeño.
+
 ### 3. Análisis de Componentes Principales
 
 Se aplicó PCA sobre variables estandarizadas con el objetivo de reducir la dimensionalidad y evitar redundancias entre variables correlacionadas.
 
-Las tres primeras componentes principales explicaron aproximadamente el 81,4% de la variabilidad total.
+Según la regla de Kaiser, se conservaron las componentes con autovalor mayor a 1. En este caso, las componentes retenidas fueron **CP1** y **CP2**, que explican aproximadamente el **65,33%** de la variabilidad total.
+
+Si bien la incorporación de **CP3** permitía alcanzar aproximadamente el **81,4%** de varianza acumulada, esta componente presentó un autovalor menor a 1 y quedó asociada principalmente a `driver_age`. Por este motivo, no se utilizó en el clustering final.
 
 ![Varianza acumulada del PCA](reports/figures/pca_varianza_acumulada.png)
 
@@ -102,7 +106,6 @@ Las componentes se interpretaron de la siguiente manera:
 
 - **CP1**: desempeño posicional general. Valores positivos se asocian con peores posiciones de largada, llegada y campeonato, mientras que valores negativos se vinculan con mejores posiciones y mayor rendimiento competitivo.
 - **CP2**: continuidad en carrera o proporción de carrera completada, dominada principalmente por `laps_pct`.
-- **CP3**: perfil etario del piloto, explicado principalmente por `driver_age`.
 
 ### 4. Clustering
 
