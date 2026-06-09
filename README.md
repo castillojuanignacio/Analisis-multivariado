@@ -100,7 +100,7 @@ Según la regla de Kaiser, se conservaron las componentes con autovalor mayor a 
 
 Si bien la incorporación de **CP3** permitía alcanzar aproximadamente el **81,4%** de varianza acumulada, esta componente presentó un autovalor menor a 1 y quedó asociada principalmente a `driver_age`. Por este motivo, no se utilizó en el clustering final.
 
-![Varianza acumulada del PCA](reports/figures/pca_varianza_acumulada.png)
+![Scree plot del PCA](reports/figures/pca_scree_plot.png)
 
 Las componentes se interpretaron de la siguiente manera:
 
